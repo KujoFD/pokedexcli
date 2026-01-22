@@ -5,7 +5,7 @@ import (
 )
 
 // callback for help command
-func commandHelp() error {
+func commandHelp(cfg *config) error {
 	fmt.Print("\nWelcome to the Pokedex!\nUsage: \n\n")
 	for _, cmd := range getCommands() {
 		fmt.Printf("%s: %s\n", cmd.name, cmd.description)
